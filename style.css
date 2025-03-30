@@ -1,0 +1,164 @@
+body{
+    background-color: hsl(0, 0%, 100%);
+    /* place-content: center;
+    min-height: 100vh; */
+    
+}
+@font-face{ 
+          font-family: prj;
+          src: url(BarlowSemiCondensed-Light.ttf)
+}
+
+.container {
+ width:200%;
+display: grid;
+ grid-template-areas: 'daniel daniel daniel jon kira'
+                      'janet patrick patrick patrick kira';
+
+ gap: 20px;
+ font-family: prj;
+ font-size: 13px;
+ max-width: 1440px;
+ padding: 5%;
+ margin:10%;
+}
+  
+.container>div{ 
+   border-radius: 20px;
+  /*border: none solid white;*/
+
+}
+img { 
+      margin-left: 25px;
+      margin-top: 25px;
+      border: 3px  solid hsl(263, 65%, 60%);
+      border-radius:50px;
+      float: left;
+      
+}
+
+.d1{/* Daniel Clifford*/
+  background-color:hsl(263, 55%, 52%);
+  box-shadow: 10px -5px 70px hsl(210, 1%, 53%);
+  grid-area:daniel;
+  border-radius: 10px;
+  background-image: url('img/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+   
+  /*border: 0.5px solid purple;*/
+  color: white;
+  
+  
+  }
+ 
+.d2{/*Jonathan Walters*/
+  background-color:hsl(217, 19%, 35%);
+  /*box-shadow: 10px -5px 70px hsl(210, 1%, 53%);*/
+  grid-area:jon;
+  border-radius: 10px;
+  color: hsl(214, 17%, 92%);
+}
+.d3{/*Kira Whittle*/
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 10px -5px 70px hsl(210, 1%, 53%);
+  grid-area: kira;
+  color: hsl(217, 19%, 35%);
+ 
+ 
+}
+.d4{/*Jeanette Harmon*/
+  background-color:hsl(0, 0%, 99%);
+  border-radius: 10px;
+  box-shadow: 10px 10px 70px hsl(210, 1%, 53%);
+  grid-area: janet;
+  color: hsl(217, 19%, 35%);
+}
+.d5{/*Patrick Abrams*/
+  background-color:hsl(0, 2%, 11%);
+  border-radius: 10px;
+  grid-area: patrick;
+  color:hsl(214, 17%, 92%);
+}
+
+h5 {/*name*/
+   font-size: 1.2em;
+   margin-left: 110px;
+   margin-top: 30px ;
+   margin-bottom: 0px;
+}
+.pos {/*pos*/
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+   
+  
+ 
+h3 {/*titr*/
+   margin-top: 60px;
+   margin-left: 40px;
+   font-size: 1.8em;
+   
+   
+   }
+p  {/*tetx*/
+    padding:20;
+    text-align: justify;
+    font-size:1.2em;
+    margin: 20px;
+    }
+/* media query*/
+@media screen and (max-width:376px){
+  body{
+  padding: 0px;
+  }
+  .container{
+    grid-template-areas: 'daniel'
+                          'jon'
+                          'janet'
+                          'patrick'
+                          'kira';
+    font-size: 1.5em;
+    padding: 0px;
+    max-width: 100%;
+} 
+ img { 
+  margin-left: 50px;
+  margin-top: 40px;
+  border: 3px  solid hsl(263, 65%, 60%);
+  border-radius:50px;
+  float: left;
+ }
+  .d1{
+    grid-area: daniel;
+    background-image: none;
+  }
+  .d2{
+    grid-area:jon;
+     
+  }
+  .d3{
+    grid-area: kira;
+     
+  }
+  .d4{
+    grid-area: janet;
+     
+  }
+  .d5{
+    grid-area: patrick;
+     
+  }
+    h5 {/*name*/
+      font-size: 1em;
+      margin-left: 140px;
+      margin-top: 30px ;
+      margin-bottom: 0px;
+   }
+   .pos {/*pos*/
+     font-size: 1em;
+     margin-left: 30px;
+   }
+  
+}
